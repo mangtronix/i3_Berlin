@@ -177,6 +177,18 @@
     #define  DEFAULT_Ki 0.73
     #define  DEFAULT_Kd 65.37
 
+// From Autotune with E3D hotend V5, 220C target temperature using gcode M303S220C10
+// 2014-07-18
+//[INFO] RECV:  bias: 69 d: 69 min: 216.14 max: 224.05
+//[INFO] RECV:  Ku: 22.21 Tu: 38.01
+//[INFO] RECV:  Clasic PID
+//[INFO] RECV:  Kp: 13.33
+//[INFO] RECV:  Ki: 0.70
+//[INFO] RECV:  Kd: 63.33
+//[INFO] RECV: PID Autotune finished! Put the Kp, Ki and Kd constants into Configuration.h
+// Set with
+// M304 P13.33 I0.70 D63.33
+
 //    #define  DEFAULT_Kp 18.13
 //    #define  DEFAULT_Ki 1.29
 //    #define  DEFAULT_Kd 63.55
