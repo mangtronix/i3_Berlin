@@ -82,7 +82,7 @@
 // #define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
 
 // This defines the number of extruders
-#define EXTRUDERS 1
+#define EXTRUDERS 2
 
 //// The following define selects which power supply you have. Please choose the one that matches your setup
 // 1 = ATX
@@ -123,7 +123,7 @@
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (1k pullup)
 
 #define TEMP_SENSOR_0 57
-#define TEMP_SENSOR_1 0
+#define TEMP_SENSOR_1 57
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 58
 
@@ -403,11 +403,13 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {50*60, 50*60, 26*60, 0}  // set the homing speeds (mm/min)
+//#define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min)
 
 // default settings
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,(200.0*16/8),157.5}  // default steps per unit for i3 Berlin
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 26, 50}    // (mm/sec) 
+//#define DEFAULT_MAX_FEEDRATE          {500, 500, 26, 50}    // (mm/sec) 
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 2, 50}    // (mm/sec) 
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,25,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          250    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
