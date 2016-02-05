@@ -125,6 +125,18 @@ static void lcd_implementation_init()
 	do {
 			// RepRap init bmp
 			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
+
+#define MANGTRONIX_WELCOME			
+#ifdef MANGTRONIX_WELCOME
+			// Welcome message
+			u8g.setFont(u8g_font_6x10_marlin);
+			u8g.drawStr(52,10,"mangtronix"); 
+			u8g.setFont(u8g_font_6x10_marlin);
+			u8g.drawStr(54,28,"i3 Berlin");
+			u8g.setFont(u8g_font_5x8);
+			u8g.drawStr(57,41,"May the source");
+			u8g.drawStr(59,50,"be with you!");
+#else
 			// Welcome message
 			u8g.setFont(u8g_font_6x10_marlin);
 			u8g.drawStr(62,10,"MARLIN"); 
@@ -140,6 +152,7 @@ static void lcd_implementation_init()
 			u8g.drawStr(62,61,"uses u");
 			u8g.drawStr90(92,57,"8");
 			u8g.drawStr(100,61,"glib");
+#endif
 	   } while( u8g.nextPage() );
 }
 
