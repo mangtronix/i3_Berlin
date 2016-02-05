@@ -395,9 +395,16 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 //Manual homing switch locations:
 // For deltabots this means top and center of the cartesian print volume.
-#define MANUAL_X_HOME_POS -35
-#define MANUAL_Y_HOME_POS -8
+// Values for i3 Berlin with ACME rods
+//#define MANUAL_X_HOME_POS -35
+//#define MANUAL_Y_HOME_POS -8
+//#define MANUAL_Z_HOME_POS 0
+
+// Values for old i3 Berlin with threaded rod
+#define MANUAL_X_HOME_POS -36.1
+#define MANUAL_Y_HOME_POS -35.5
 #define MANUAL_Z_HOME_POS 0
+
 //#define MANUAL_Z_HOME_POS 402 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
