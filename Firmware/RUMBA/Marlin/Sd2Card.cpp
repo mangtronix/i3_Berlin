@@ -19,6 +19,13 @@
  */
 #include "Marlin.h"
 
+// Toshiba FlashAir support from http://www.printrbottalk.com/forum/viewtopic.php?f=20&t=9326
+// FLASH_AIR_WIFI must be defined if a Toshiba FlashAir card's WiFi is used.
+// The FlashAir card will broadcast approx 6 seconds after Mounting.
+// If a WiFi link is not established within 1 minute the FlashAir's WiFi will
+// hibernate (must re-Mount card to retry WiFi linking).
+#define FLASH_AIR_WIFI
+
 #ifdef SDSUPPORT
 #include "Sd2Card.h"
 //------------------------------------------------------------------------------
@@ -256,10 +263,16 @@ bool Sd2Card::erase(uint32_t firstBlock, uint32_t lastBlock) {
     goto fail;
   }
   chipSelectHigh();
+  #ifdef FLASH_AIR_WIFI // Toshiba FlashAir Patch.
+  spiSend(0XFF); // Purge pending status byte.
+  #endif
   return true;
 
  fail:
   chipSelectHigh();
+  #ifdef FLASH_AIR_WIFI // Toshiba FlashAir Patch.
+  spiSend(0XFF); // Purge pending status byte.
+  #endif
   return false;
 }
 //------------------------------------------------------------------------------
