@@ -11,18 +11,17 @@ Installation instructions.
 
 
 
-Please isntall at least Cura 13.11.2 on your Platform OS 
+Please install Cura 15.04 on your Platform OS 
        *Downlaod from [http://software.ultimaker.com/?show=all](http://software.ultimaker.com/?show=all)*
        
-       - Cura_13.11.2.exe for Windows (XP/Vista/8)
-       - Cura-13.11.2-debian.deb for Debian alike Gnu/Linux (Ubuntu/Mint)
-       - Cura-13.11.2-MacOS.dmg for Mac OSX (10.6/10.7/10.8/10.9)
+       - Cura_15.04.exe for Windows (XP/Vista/8)
+       - Cura-15.04-debian_amd64.deb for Debian alike Gnu/Linux (Ubuntu/Mint) ( _i386 for 32 bit CPU's)
+       - Cura-15.04-MacOS.dmg for Mac OSX (10.6/10.7/10.8/10.9)
        
-       or any newer version. 
-
-
-Then copy all files in /CuraProfile to your coresponding settings folder, if you installed a newer version of Cura the folder named coresponds to your version.
+       the newer Cura-15.06 is not yet supported
+       
+Then copy all files in /CuraProfile to your coresponding settings folder.
       
-       - Windows c:\Programm Files\Cura_13.11.2\Cura\  ( Programm Files (x86)??)
-       - Linux /home/<user>/.cura/13.11.2/
-       - Mac /Users/<user>/.cura/13.11.2/ 	  
+       - Windows c:\Users\<user<\.cura\15.04
+       - Linux /home/<user>/.cura/15.04/
+       - Mac /Users/<user>/Library/Application Support/Cura/15.04/ 	  
